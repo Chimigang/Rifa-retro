@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rifa Retro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎰 Gran Rifa Retro 🎰</h1>
+    <p>Regístrate y gira la ruleta para ganar uno de nuestros premios.</p>
+
+    <div id="form">
+      <input type="text" id="nombre" placeholder="Tu nombre" />
+      <input type="email" id="email" placeholder="Tu correo" />
+      <button onclick="registrarUsuario()">Registrarse</button>
+    </div>
+
+    <canvas id="ruletaCanvas" width="500" height="500" class="hidden"></canvas>
+    <button id="btnGirar" class="hidden" onclick="girarRuleta()">Girar Ruleta</button>
+
+    <div id="resultado" class="hidden">
+      <h2 id="mensajeResultado"></h2>
+      <img id="logoPremio" src="img/logo.png" alt="Logo Lobo" width="120"/>
+    </div>
+
+    <audio id="audioTension" src="sound/tension.mp3"></audio>
+    <audio id="audioVictoria" src="sound/victoria.mp3"></audio>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
